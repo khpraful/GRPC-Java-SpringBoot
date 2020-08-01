@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.emp.grpc";
+
+service EmployeeService{
+	rpc getEmployee(Employee) returns (EmployeeResponse);
+}
+
+message Employee{
+	int32 empID = 1;
+	string empName =2;
+	string empDept = 3;
+}
+
+message EmployeeResponse{
+	string message = 1;	
+}
+	
